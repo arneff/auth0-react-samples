@@ -6,9 +6,7 @@ import config from "../auth_config.json";
 import Loading from "../components/Loading";
 import whole from "../assets/whole.png";
 
-// const { apiOrigin = "http://localhost:3001" } = config;
-const appPort = process.env.API_PORT || 3001;
-const apiOrigin = config.appOrigin || `http://localhost:${appPort}`;
+const { apiOrigin = "http://172.105.135.61:3001" } = config;
 
 
 
