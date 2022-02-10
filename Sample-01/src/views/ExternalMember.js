@@ -6,8 +6,9 @@ import config from "../auth_config.json";
 import Loading from "../components/Loading";
 import badge from "../assets/member.png";
 
-const { apiOrigin = "http://localhost:3001" } = config;
-
+// const { apiOrigin = "http://localhost:3001" } = config;
+const appPort = process.env.API_PORT || 3001;
+const apiOrigin = config.appOrigin || `http://localhost:${appPort}`;
 
 
 
