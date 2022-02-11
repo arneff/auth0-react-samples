@@ -1,20 +1,24 @@
 {
   "name": "auth0-react-sample",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.x"
+  },
   "private": true,
   "scripts": {
-    "start": "npm-run-all --parallel spa api-server",
+    "start": "npm-run-all --parallel spa server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
     "eject": "react-scripts eject",
     "spa": "react-scripts start",
     "server": "node server.js",
     "server:dev": "nodemon server.js",
-    "api-server": "node api-server.js",
-    "api-server:dev": "nodemon api-server.js",
+    "api-server": "node server.js",
+    "api-server:dev": "nodemon server.js",
     "dev": "npm-run-all --parallel spa api-server:dev",
-    "prod": "npm-run-all --parallel server api-server"
+    "prod": "npm-run-all --parallel spa server"
   },
+  
   "dependencies": {
     "@auth0/auth0-react": "^1.2.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
