@@ -2,5 +2,6 @@
   "domain": "dev-h1uc4uvp.us.auth0.com",
   "clientId": "wDUsOJsjqnJDuP7zMqZa1yd9Vm4x2LqF",
   "audience": "https://hawktest.com",
-  "scope": "update:current_user_metadata"
+  "scope": "update:current_user_metadata",
+  "appOrigin": "https://pizza42-react-neff.herokuapp.com"
 }
