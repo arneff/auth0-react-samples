@@ -8,7 +8,7 @@ import whole from "../assets/whole.png";
 
 
 export const ExternalApiComponent = () => {
-  const appPort = process.env.API_PORT || 3001;
+  const appPort = process.env.PORT || 3001;
   const apiOrigin = config.apiOrigin || `http://localhost:${appPort}`;
   const [state, setState] = useState({
     showResult: false,

@@ -11,7 +11,7 @@ import badge from "../assets/member.png";
 
 
 export const ExternalMemberComponent = () => {
-  const appPort = process.env.API_PORT || 3001;
+  const appPort = process.env.PORT || 3001;
   const apiOrigin = config.appOrigin || `http://localhost:${appPort}`
   const [state, setState] = useState({
     showResult: false,
