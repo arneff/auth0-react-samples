@@ -6,13 +6,12 @@ import config from "../auth_config.json";
 import Loading from "../components/Loading";
 import badge from "../assets/member.png";
 
-
-
-
+// const { apiOrigin = "http://localhost:3001" } = config;
 
 export const ExternalMemberComponent = () => {
   const appPort = process.env.PORT || 3001;
-  const apiOrigin = config.appOrigin || `http://localhost:${appPort}`
+  const apiOrigin = config.appOrigin || `http://localhost:${appPort}`;
+  
   const [state, setState] = useState({
     showResult: false,
     apiMessage: "",

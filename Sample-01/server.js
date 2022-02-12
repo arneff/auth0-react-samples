@@ -45,8 +45,12 @@ const checkJwt = jwt({
 
 const checkScopes = jwtScope('update:current_user_metadata');
 
+
+
+
 app.get('/api/test', (req, res) => {
     res.send({msg: "success!"});
+    
 });
 
 app.post("/api/member", async (req, res) => {
@@ -178,16 +182,12 @@ app.post("/api/external", checkJwt, checkScopes,  async (req, res) => {
     console.log(metaResp)
 
   }
-  
 
-
-    
-
-   
 });
 
 app.get('/*', (req, res) => {
     res.sendFile(join(__dirname, 'build', 'index.html'));
+
 });
 
 // app.listen(port, () => console.log(`Server listening on port ${port}`));
